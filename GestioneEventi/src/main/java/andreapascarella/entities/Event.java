@@ -32,10 +32,11 @@ public class Event {
     public Event() {
     }
 
-    public Event(String title, LocalDate eventDate, String description, int maxNumberOfPartecipants) {
+    public Event(String title, LocalDate eventDate, String description, EventType eventType, int maxNumberOfPartecipants) {
         this.title = title;
         this.eventDate = eventDate;
         this.description = description;
+        this.eventType = eventType;
         this.maxNumberOfParticipants = maxNumberOfPartecipants;
     }
 
@@ -81,5 +82,17 @@ public class Event {
 
     public void setMaxNumberOfParticipants(int maxNumberOfParticipants) {
         this.maxNumberOfParticipants = maxNumberOfParticipants;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", eventDate=" + eventDate +
+                ", description='" + description + '\'' +
+                ", eventType=" + eventType +
+                ", maxNumberOfParticipants=" + maxNumberOfParticipants +
+                '}';
     }
 }
